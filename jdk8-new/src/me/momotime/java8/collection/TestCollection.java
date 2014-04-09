@@ -9,6 +9,7 @@ import me.momotime.java8.lambda.Student;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
@@ -35,5 +36,19 @@ public class TestCollection {
         System.out.println(list.parallelStream().filter(e -> e.getAge() > 15).collect(Collectors.toList()));
 
         list.stream().mapToInt(Student::getAge).average().getAsDouble();
+
+        // 按性别分类
+        Map<String, Integer> map = list.parallelStream().collect(
+                Collectors.groupingBy(Student::getGender, Collectors.summingInt(p -> 1)));
+        System.out.println(map);
+
+
+        Map<String, List<String>> map2 = list.stream()
+                .collect(Collectors.groupingBy(
+                        Student::getGender,
+                        Collectors.mapping(Student::getName, Collectors.toList())));
+        System.out.println(map2);
+
+
     }
 }
