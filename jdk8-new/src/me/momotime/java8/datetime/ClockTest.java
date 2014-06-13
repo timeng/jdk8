@@ -54,7 +54,9 @@ public class ClockTest {
         LocalTime time = LocalTime.now();
         LocalTime newTime;
         //  newTime = time.plus(5, HOURS);
-        newTime = time.plusHours(5);
+        newTime = time.plusHours(1); //    加   1小时
+        System.out.println(time);
+        System.out.println(newTime);
         // newTime = time.plus(p);
     }
 }
