@@ -12,7 +12,7 @@ public class ClockTest {
         System.out.println(zoneId + "  ZoneId.systemDefault");
 
         //获取时区
-        ZoneId zoneIdoffSet = ZoneId.ofOffset("UTC",ZoneOffset.ofHours(8));
+        ZoneId zoneIdoffSet = ZoneId.ofOffset("UTC", ZoneOffset.ofHours(8));
         System.out.println(zoneIdoffSet + "  zoneIdoffSet");
 
         Clock c1 = Clock.systemUTC(); //系统默认UTC时钟（当前瞬时时间 System.currentTimeMillis()）
@@ -53,10 +53,8 @@ public class ClockTest {
         //Period p = Period.of;
         LocalTime time = LocalTime.now();
         LocalTime newTime;
-      //  newTime = time.plus(5, HOURS);
-// or
+        //  newTime = time.plus(5, HOURS);
         newTime = time.plusHours(5);
-// or
-       // newTime = time.plus(p);
+        // newTime = time.plus(p);
     }
 }
