@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 /**
  * Paralle API
- * 
+ * <br>http://radar.oreilly.com/2015/02/java-8-streams-api-and-parallelism.html
  * @author TM
  * @since 2016/8/4 000419:38
  */
